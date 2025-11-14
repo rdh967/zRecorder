@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import * as FileSystem from 'expo-file-system/legacy';
-import RecordingsList from './RecordingsList/RecordingsList';
+import RecordingsList from './RecordingsList';
 
 export default function AllRecordingsContainer() {
   const [recordings, setRecordings] = useState([]);
@@ -13,6 +13,7 @@ export default function AllRecordingsContainer() {
   const loadRecordings = async () => {
     try {
       const files = await FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
+      console.log(files);
       const audioFiles = files
         .filter(f => f.endsWith('.m4a') || f.endsWith('.mp4'))
         .map(f => FileSystem.documentDirectory + f);

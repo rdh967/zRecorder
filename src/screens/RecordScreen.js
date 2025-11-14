@@ -4,11 +4,13 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import RecordButton from '../components/RecordButton';
+import AllRecordingsContainer from '../components/RecordingList/AllRecordingsContainer'
 
 export default function RecordScreen() {
   return (
     <View style={styles.container}>
       <RecordButton />
+      <AllRecordingsContainer/>
     </View>
   );
 }
