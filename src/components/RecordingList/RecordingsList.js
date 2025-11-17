@@ -76,6 +76,7 @@ export default function RecordingsList({ recordings }) {
       filename={item}
       onPress={() => handlePlayPause(item)}
       isPlaying={item === playingFile && isPlaying} // highlight only if actively playing
+      isPaused={item === playingFile && !isPlaying}
     />
   );
 
