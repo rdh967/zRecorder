@@ -82,7 +82,6 @@ export default function RecordingsList({ recordings }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Recordings</Text>
       {recordings && recordings.length > 0 ? (
         <FlatList
           data={recordings}
@@ -100,13 +99,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1b103a', // deep indigo-purple
-    padding: 20,
-  },
-  title: {
-    fontSize: 22,
-    color: 'white',
-    marginBottom: 10,
-    fontWeight: '600',
+    paddingVertical: 20,
+    paddingHorizontal: 10,
+    borderTopLeftRadius: 20,                            borderTopRightRadius: 20,
+    width: '100%',
   },
   empty: {
     color: '#aaa',
